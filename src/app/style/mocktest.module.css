@@ -1,0 +1,9 @@
+.question_md {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.question_md div {
+    justify-content: center !important;
+    margin-bottom: 10px;
+}

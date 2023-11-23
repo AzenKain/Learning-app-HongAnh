@@ -1,0 +1,26 @@
+.card_md {
+    margin: 20px;
+}
+.card_md p {
+    color: #fff;
+}
+
+.card_md div {
+    color: #fff !important; 
+}
+
+.card_md div small {
+    color: #fff !important;
+}
+
+.title_md {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 3vh;
+}
+
+.container_md {
+    text-align: center;
+    align-items: center;
+    width: 100%;
+}

@@ -1,0 +1,129 @@
+{
+    "admin": {
+        "999212129": {
+            "email" : "admin@admin.com",
+            "password" : "admin"
+        }
+    },
+    "1a6": {
+        "data": {
+            "Bài Tập Toán": {
+                "id": 1,
+                "Answer": [
+                    "D",
+                    "B",
+                    "C",
+                    "B",
+                    "B",
+                    "C",
+                    "A",
+                    "B",
+                    "A",
+                    "C",
+                    "B"
+                ],
+                "AllQuestions": {
+                    "Ex0": {
+                        "question": "Câu 1: Con chó con nặng 3000 …",
+                        "choices": [
+                            ". ki-lô-gam",
+                            ". tấn",
+                            ". tạ",
+                            ". gam"
+                        ]
+                    },
+                    "Ex1": {
+                        "question": "Câu 2: Kết quả cần điền vào phép tính: “900 năm – 500 năm = ….. thế kỉ” là:",
+                        "choices": [
+                            ". 400",
+                            ". 4",
+                            ". 40",
+                            ". 14"
+                        ]
+                    },
+                    "Ex2": {
+                        "question": "Câu 3: Tờ giấy hình vuông có độ dài cạnh là 9dm. Diện tích của tờ giấy đó là:",
+                        "choices": [
+                            ". 36dm",
+                            ". 810cm2",
+                            ". 81dm2",
+                            ". 36dm2"
+                        ]
+                    },
+                    "Ex3": {
+                        "question": "Câu 4: Giá tiền của một cái ba lô cỡ nhỏ là 140 500 đồng, ba lô cỡ lớn có giá đắt hơn cỡ nhỏ là 24500 đồng. Ba lô cỡ lớn có giá tiền là:",
+                        "choices": [
+                            ". 116 000 đồng",
+                            ". 165 000 đồng",
+                            ". 116000",
+                            ". 1 65 000"
+                        ]
+                    },
+                    "Ex4": {
+                        "question": "Câu 5. Chữ số 7 trong số 4 578 964 thuộc hàng nào?",
+                        "choices": [
+                            ". Hàng trăm nghìn",
+                            ". Hàng chục nghìn",
+                            ". Hàng chục",
+                            ". Hàng nghìn"
+                        ]
+                    },
+                    "Ex5": {
+                        "question": "Câu 6.  Trong các số 63 597 ; 63 567 ; 63 697 ; 63 679 số lớn nhất là số:",
+                        "choices": [
+                            ". 63 597",
+                            ". 63 567",
+                            ". 63 697",
+                            ". 63 679"
+                        ]
+                    },
+                    "Ex6": {
+                        "question": "Câu 7:   Số gồm: 9 nghìn,8 trăm,8 chục và 8 đơn vị được viết là:",
+                        "choices": [
+                            ". 9 888",
+                            ". 9 088",
+                            ". 9 0008",
+                            ". 9 880"
+                        ]
+                    },
+                    "Ex7": {
+                        "question": "Câu 8:   Chữ số 5 của số 200 582 thuộc hàng nào, lớp nào?",
+                        "choices": [
+                            ". Hàng trăm, lớp nghìn",
+                            ". Hàng trăm, lớp đơn vị",
+                            ". Hàng chục, lớp đơn vị",
+                            ".Hàng chục, lớp nghìn"
+                        ]
+                    },
+                    "Ex8": {
+                        "question": "Câu 9:  Chu vi hình chữ nhật có chiều dài 45cm, chiều rộng 20 cm là:",
+                        "choices": [
+                            ".130cm",
+                            ".900cm",
+                            ". 65cm",
+                            ". 56cm"
+                        ]
+                    },
+                    "Ex9": {
+                        "question": "Câu 10:  Cho biểu thức (24 + b) x 3. Với b=3 thì biểu thức có giá trị là:",
+                        "choices": [
+                            ". 72",
+                            ".27",
+                            ". 81",
+                            ". 27"
+                        ]
+                    },
+                    "Ex10": {
+                        "question": "Câu 11. 8 tấn 12 tạ  =…..tạ. Số cần điền là:",
+                        "choices": [
+                            ". 812",
+                            ". 92",
+                            ". 821",
+                            ".820"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
