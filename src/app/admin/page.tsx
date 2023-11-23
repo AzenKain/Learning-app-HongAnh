@@ -39,7 +39,7 @@ export default function Admin() {
         console.log(Password)
         for (let i in dataFetch) {
             if (dataFetch[i]['email'] === Email && dataFetch[i]['password'] == Password) {
-                router.push(`/admin/edit`)
+                router.push(`/admin/control`)
             }
         }
         setEmail('');

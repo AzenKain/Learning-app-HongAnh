@@ -5,9 +5,9 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation'
-import styles from '../../page.module.css'
+import styles from '../../../page.module.css'
 import { get, set, ref } from 'firebase/database';
-import { database } from '../../firebaseConfig';
+import { database } from '../../../firebaseConfig';
 
 export default function Admin() {
     const router = useRouter()
