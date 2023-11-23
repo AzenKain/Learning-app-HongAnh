@@ -29,11 +29,14 @@ const MockTest = ({ params }: { params: { subject: string, mocktest: string } })
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         let count: number = 0;
+        console.log(dataAns);
+        console.log(radioValues);
         if (Array.isArray(dataAns)) {
             for (let i: number = 0; i < radioValues.length; i++) {
                 if (typeof dataAns[i] !== 'undefined') {
-                    const charFromDataAns = dataAns[i];
-                    if (radioValues[i] == charFromDataAns) count++;
+                    const charFromDataAns: number = dataAns[i].charCodeAt(0) - 'A'.charCodeAt(0) + 1;
+                    console.log(charFromDataAns);
+                    if (parseInt(radioValues[i]) == charFromDataAns) count++;
                 }
             }
             toast.success(`Đúng ${count}/${dataAns.length} câu!`);
@@ -52,6 +55,9 @@ const MockTest = ({ params }: { params: { subject: string, mocktest: string } })
 
     const handleRadioChange = (index: number, value: string,) => {
         const updatedRadioValues = [...radioValues];
+        if (radioValues.length < dataAns.length) {
+            for (let i = 0; i < dataAns.length / radioValues.length; i++) updatedRadioValues.push(...radioValues);
+        }
         updatedRadioValues[index] = value;
         console.log(index, value)
         setRadioValues(updatedRadioValues);
