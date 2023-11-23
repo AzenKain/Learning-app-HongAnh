@@ -12,10 +12,8 @@ export default function Home() {
 
   const [Class, setClass] = useState('');
 
-  const handleSubmit = event  => {
-    console.log('handleSubmit ran');
-    event.preventDefault();
-    console.log('Class 👉️', Class);
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>)  => {
+    event.preventDefault();;
     setClass('');
     router.push(`/${Class.toLowerCase( )}`)
   };

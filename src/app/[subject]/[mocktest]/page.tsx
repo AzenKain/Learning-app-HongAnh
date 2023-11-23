@@ -14,10 +14,17 @@ import { database } from '../../firebaseConfig';
 import styles from '../../page.module.css'
 import { toast, ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+type Question = {
+    question: string;
+    choices: string[];
+};
 
+type AllQuestions = {
+    [key: string]: Question;
+};
 const MockTest = ({ params }: { params: { subject: string, mocktest: string } }) => {
-    const [dataFetch, setDataFetch] = useState();
-    const [dataAns, setDataAns] = useState();
+    const [dataFetch, setDataFetch] = useState<AllQuestions>({})
+    const [dataAns, setDataAns] = useState<string[]>([]);
     const router = useRouter()
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -29,11 +36,7 @@ const MockTest = ({ params }: { params: { subject: string, mocktest: string } })
                     if (radioValues[i] == charFromDataAns) count++;
                 }
             }
-            let tmp: number = 0;
-            for (let j in dataAns) {
-                tmp++;
-            }
-            toast.success(`Đúng ${count}/${tmp} câu!`);
+            toast.success(`Đúng ${count}/${dataAns.length} câu!`);
         } else {
            toast.error('No data available');
         }
@@ -125,15 +128,15 @@ const MockTest = ({ params }: { params: { subject: string, mocktest: string } })
         return items
     }
     return (
-        <div>
+        <form onSubmit={handleSubmit}>
             <p className={styles.text_base}>Nội dung bài tập</p>
             <div>
                 {genData()}
             </div>
             <Row>
-                <Button onClick={handleSubmit} variant="primary">Nộp bài</Button>
+                <Button type="submit" variant="primary">Nộp bài</Button>
             </Row>
-        </div>
+        </form>
     );
 };
 
