@@ -21,14 +21,18 @@ const MockTest = ({ params }: { params: { subject: string, mocktest: string } })
     const router = useRouter()
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        console.log(dataAns)
-        console.log(radioValues)
         let count: number = 0;
-        for (let i :number= 0; i < radioValues.length; i++) {
-            const charFromDataAns = dataAns[i].toString().toLowerCase()[0]; 
-            if (radioValues[i].toLowerCase() === charFromDataAns) count++;
-        };
-        toast.success(`Đúng ${count}/${dataAns.length} câu!`);
+        if (dataAns) {
+            for (let i: number = 0; i < radioValues.length; i++) {
+                if (dataAns[i]) {
+                    const charFromDataAns = dataAns[i].toString().toLowerCase()[0];
+                    if (radioValues[i].toLowerCase() === charFromDataAns) count++;
+                }
+            }
+            toast.success(`Đúng ${count}/${dataAns.length} câu!`);
+        } else {
+           toast.error('No data available');
+        }
     }
     const [radioValues, setRadioValues] = useState(['', '', '', '']);
 
