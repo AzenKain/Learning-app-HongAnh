@@ -29,7 +29,11 @@ const MockTest = ({ params }: { params: { subject: string, mocktest: string } })
                     if (radioValues[i] == charFromDataAns) count++;
                 }
             }
-            toast.success(`Đúng ${count}/${dataAns.length} câu!`);
+            let tmp: number = 0;
+            for (let j in dataAns) {
+                tmp++;
+            }
+            toast.success(`Đúng ${count}/${tmp} câu!`);
         } else {
            toast.error('No data available');
         }
