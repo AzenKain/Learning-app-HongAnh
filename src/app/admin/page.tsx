@@ -33,7 +33,7 @@ export default function Admin() {
 
         fetchData();
     },);
-    const handleSubmit = event => {
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         console.log(Email)
         console.log(Password)

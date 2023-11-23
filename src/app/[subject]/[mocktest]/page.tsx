@@ -19,7 +19,7 @@ const MockTest = ({ params }: { params: { subject: string, mocktest: string } })
     const [dataFetch, setDataFetch] = useState();
     const [dataAns, setDataAns] = useState();
     const router = useRouter()
-    const handleSubmit = event => {
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         console.log(dataAns)
         console.log(radioValues)

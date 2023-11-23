@@ -17,7 +17,7 @@ export default function Admin() {
     const [MockTest, setMockTest] = useState('');
     const [AnsTest, setAnsTest] = useState('');
 
-    const handleSubmit = event => {
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
         const classRef = ref(database, Class);
