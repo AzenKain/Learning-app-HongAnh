@@ -24,8 +24,9 @@ const MockTest = ({ params }: { params: { subject: string, mocktest: string } })
         console.log(dataAns)
         console.log(radioValues)
         let count: number = 0;
-        for (let i = 0; i < radioValues.length; i++) {
-            if (radioValues[i].toLowerCase() == (dataAns[i].toString().toLowerCase() - 'a')) count++;
+        for (let i :number= 0; i < radioValues.length; i++) {
+            const charFromDataAns = dataAns[i].toString().toLowerCase()[0]; 
+            if (radioValues[i].toLowerCase() === charFromDataAns) count++;
         };
         toast.success(`Đúng ${count}/${dataAns.length} câu!`);
     }
