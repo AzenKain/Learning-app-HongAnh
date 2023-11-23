@@ -22,9 +22,9 @@ const MockTest = ({ params }: { params: { subject: string, mocktest: string } })
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         let count: number = 0;
-        if (dataAns) {
+        if (Array.isArray(dataAns) && dataAns.length > 0) {
             for (let i: number = 0; i < radioValues.length; i++) {
-                if (dataAns[i]) {
+                if (typeof dataAns[i] !== 'undefined') {
                     const charFromDataAns = dataAns[i].toString().toLowerCase()[0];
                     if (radioValues[i].toLowerCase() === charFromDataAns) count++;
                 }
