@@ -51,6 +51,7 @@ const ClassName = ({ params }: { params: { classname: string } }) => {
             const data = snapshot.val();
             delete data['data'][id];
             set(classRef, data);
+            location.reload();
         }).catch((error) => {
             console.log(error);
         },);
