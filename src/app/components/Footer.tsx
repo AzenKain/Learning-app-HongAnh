@@ -12,8 +12,8 @@ function Footer() {
                         <div className={style.footer_menu}>
                             <ul>
                                 <li><img src='/icon.jpg' alt="HTML5 Icon" width="60" height="60" /></li>
-                                <li><a href="/">Home</a></li>
-                                <li><a href="/admin">Admin</a></li>
+                                <li><a href="/">Trang chủ</a></li>
+                                <li><a href="/admin">Quản trị</a></li>
                             </ul>
                         </div>
                     </Col>
@@ -21,7 +21,7 @@ function Footer() {
                 <Row>
                     <Col>
                         <div className={style.footer_end}>
-                            <h4>Everything goes on</h4>
+                            <h4>HỌC, HỌC NỮA, HỌC MÃI</h4>
                         </div>
                     </Col>
                 </Row>

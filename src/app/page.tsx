@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
     <Row className={styles.main}>
-        <p>Admin</p>
+        <p>Trang Chủ</p>
         <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3">
           <Form.Label>Nhập Tên Lớp</Form.Label>

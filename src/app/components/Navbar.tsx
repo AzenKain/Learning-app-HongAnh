@@ -14,8 +14,8 @@ function Header() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/admin">Admin</Nav.Link>
+              <Nav.Link href="/">Trang chủ</Nav.Link>
+              <Nav.Link href="/admin">Quản trị</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
