@@ -53,7 +53,7 @@ const MockTest = ({ params }: { params: { subject: string, mocktest: string } })
             }
     
             // Displaying the result using toast notifications
-            toast.success(`Đúng ${count}/${dataAns.length} câu!`);
+            toast.success(`Đúng ${count}/${dataAns[0].length} câu!`);
         } else {
             // Handling the case where dataAns is not an array
             toast.error('No data available');
