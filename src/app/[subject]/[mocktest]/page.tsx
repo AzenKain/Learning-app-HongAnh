@@ -33,7 +33,7 @@ const MockTest = ({ params }: { params: { subject: string, mocktest: string } })
         console.log(radioValues);
         if (Array.isArray(dataAns)) {
             for (let i: number = 0; i < radioValues.length; i++) {
-                if (typeof dataAns[i] !== 'undefined' && typeof radioValues[i] !== 'undefined) {
+            if (typeof dataAns[i] !== 'undefined' && typeof radioValues[i] !== 'undefined') {
                     if (radioValues[i] == '1' && dataAns[i].toLowerCase() == 'a') 
                         count++;
                     else if (radioValues[i] == '2' && dataAns[i].toLowerCase() == 'B')
