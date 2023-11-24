@@ -29,11 +29,17 @@ const MockTest = ({ params }: { params: { subject: string, mocktest: string } })
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         let count: number = 0;
+    
+        // Assuming these arrays are available in your scope
+        // dataAns and radioValues should be defined earlier
+    
+        // Logging for debugging purposes
         console.log(dataAns);
         console.log(radioValues);
+    
         if (Array.isArray(dataAns)) {
             for (let i: number = 0; i < radioValues.length; i++) {
-            if (typeof dataAns[i] !== 'undefined' && typeof radioValues[i] !== 'undefined') {
+                if (typeof dataAns[i] !== 'undefined' && typeof radioValues[i] !== 'undefined') {
                     if (radioValues[i] === '1' && dataAns[i].toUpperCase() === 'A') {
                         count++;
                     } else if (radioValues[i] === '2' && dataAns[i].toUpperCase() === 'B') {
@@ -43,14 +49,17 @@ const MockTest = ({ params }: { params: { subject: string, mocktest: string } })
                     } else if (radioValues[i] === '4' && dataAns[i].toUpperCase() === 'D') {
                         count++;
                     }
-                    }
                 }
             }
+    
+            // Displaying the result using toast notifications
             toast.success(`Đúng ${count}/${dataAns.length} câu!`);
         } else {
-           toast.error('No data available');
+            // Handling the case where dataAns is not an array
+            toast.error('No data available');
         }
     }
+
     const [radioValues, setRadioValues] = useState(['', '', '', '']);
 
     const radios = [
