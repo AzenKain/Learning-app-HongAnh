@@ -40,13 +40,13 @@ const MockTest = ({ params }: { params: { subject: string, mocktest: string } })
         if (Array.isArray(dataAns)) {
             for (let i: number = 0; i < radioValues.length; i++) {
                 if (typeof dataAns[i] !== 'undefined' && typeof radioValues[i] !== 'undefined') {
-                    if (radioValues[i] === '1' && dataAns[i].toUpperCase() === 'A') {
+                    if (radioValues[i] === '1' && dataAns[0][i].toUpperCase() === 'A') {
                         count++;
-                    } else if (radioValues[i] === '2' && dataAns[i].toUpperCase() === 'B') {
+                    } else if (radioValues[i] === '2' && dataAns[0][i].toUpperCase() === 'B') {
                         count++;
-                    } else if (radioValues[i] === '3' && dataAns[i].toUpperCase() === 'C') {
+                    } else if (radioValues[i] === '3' && dataAns[0][i].toUpperCase() === 'C') {
                         count++;
-                    } else if (radioValues[i] === '4' && dataAns[i].toUpperCase() === 'D') {
+                    } else if (radioValues[i] === '4' && dataAns[0][i].toUpperCase() === 'D') {
                         count++;
                     }
                 }
