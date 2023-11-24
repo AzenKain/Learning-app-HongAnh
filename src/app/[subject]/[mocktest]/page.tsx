@@ -34,14 +34,15 @@ const MockTest = ({ params }: { params: { subject: string, mocktest: string } })
         if (Array.isArray(dataAns)) {
             for (let i: number = 0; i < radioValues.length; i++) {
             if (typeof dataAns[i] !== 'undefined' && typeof radioValues[i] !== 'undefined') {
-                    if (radioValues[i] == '1' && dataAns[i].toLowerCase() == 'a') 
+                    if (radioValues[i] === '1' && dataAns[i].toUpperCase() === 'A') {
                         count++;
-                    else if (radioValues[i] == '2' && dataAns[i].toLowerCase() == 'B')
+                    } else if (radioValues[i] === '2' && dataAns[i].toUpperCase() === 'B') {
                         count++;
-                    else if (radioValues[i] == '3' && dataAns[i].toLowerCase() == 'C')
+                    } else if (radioValues[i] === '3' && dataAns[i].toUpperCase() === 'C') {
                         count++;
-                    else if (radioValues[i] == '4' && dataAns[i].toLowerCase() == 'D')
+                    } else if (radioValues[i] === '4' && dataAns[i].toUpperCase() === 'D') {
                         count++;
+                    }
                     }
                 }
             }
