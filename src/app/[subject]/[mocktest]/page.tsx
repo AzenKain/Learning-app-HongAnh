@@ -33,10 +33,19 @@ const MockTest = ({ params }: { params: { subject: string, mocktest: string } })
         console.log(radioValues);
         if (Array.isArray(dataAns)) {
             for (let i: number = 0; i < radioValues.length; i++) {
-                if (typeof dataAns[i] !== 'undefined') {
-                    const charFromDataAns: number = dataAns[i].charCodeAt(0) - 'A'.charCodeAt(0) + 1;
-                    console.log(charFromDataAns);
-                    if (parseInt(radioValues[i]) == charFromDataAns) count++;
+                if (typeof dataAns[i] !== 'undefined' && typeof radioValues[i] !== 'undefined) {
+                    if (radioValues[i] == '1' && dataAns[i].toLowerCase() == 'a') {
+                        count++;
+                    }
+                    else if (radioValues[i] == '2' && dataAns[i].toLowerCase() == 'B'){
+                        count++;
+                    }
+                    else if (radioValues[i] == '3' && dataAns[i].toLowerCase() == 'C'){
+                        count++;
+                    }
+                    else if (radioValues[i] == '4' && dataAns[i].toLowerCase() == 'D'){
+                        count++;
+                    }
                 }
             }
             toast.success(`Đúng ${count}/${dataAns.length} câu!`);
@@ -56,7 +65,7 @@ const MockTest = ({ params }: { params: { subject: string, mocktest: string } })
     const handleRadioChange = (index: number, value: string,) => {
         const updatedRadioValues = [...radioValues];
         if (radioValues.length < dataAns.length) {
-            for (let i = 0; i < dataAns.length / radioValues.length; i++) updatedRadioValues.push(...radioValues);
+            for (let i = 0; i < (dataAns.length / radioValues.length)+1; i++) updatedRadioValues.push(...radioValues);
         }
         updatedRadioValues[index] = value;
         console.log(index, value)
